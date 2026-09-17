@@ -17,7 +17,6 @@ const message = document.querySelector("#message");
 
 const minBetButton = document.querySelector("#minBet");
 const maxBetButton = document.querySelector("#maxBet");
-
 const spinButton = document.querySelector("#spin");
 
 // this is for the button that will bet the min
@@ -52,7 +51,7 @@ spinButton.addEventListener("click", function () {
   reel2.textContent = icon2;
   reel3.textContent = icon3;
   // Checking for 3 matching symbols so we can win
-  if (icon1 === icon2 && icon2 && icon3) {
+  if (icon1 === icon2 && icon2 === icon3) {
     const winnings = currentBet * 10;
 
     balance = balance + winnings;
@@ -63,8 +62,7 @@ spinButton.addEventListener("click", function () {
 
     balance = balance + winnings;
 
-    message.textContent = `You matched 2! You won $$
-    {winnings}`;
+    message.textContent = `You matched 2! You won $${winnings}`;
     // This is the message that will appear if we have no matching bets
   } else {
     message.textContent = `No match. You lost $${currentBet}`;
@@ -76,5 +74,5 @@ spinButton.addEventListener("click", function () {
 function getRandomIcon() {
   const randomIndex = Math.floor(Math.random() * icons.length);
 
-  return symbols[randomIndex];
+  return icons[randomIndex];
 }
