@@ -3,6 +3,7 @@
 ### Goal: Build a Simple Slot Machine
 
 Build a simple slot machine with minimum 5 items per reel and 3 reels - user should be able to bet min or max and have their total update
+![alt text](image.png)
 
 ### How to submit your code for review:
 
@@ -17,6 +18,7 @@ Build a simple slot machine with minimum 5 items per reel and 3 reels - user sho
   - Anything specific on which you want feedback!
 
 Example:
+
 ```
 I completed the challenge: 5
 I feel good about my code: 4
